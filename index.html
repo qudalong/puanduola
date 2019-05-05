@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输。 -->
+    <meta http-equiv="Expires" content="-1">
+    <!--用于设定禁止浏览器从本地机的缓存中调阅页面内容，设定后一旦离开网页就无法从Cache中再调出 -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <!--清除缓存，每次访问要重新下载-->
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <!--缩放比例-->
+    <meta name="viewport" content="width=width-device,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>潘多拉</title>
+    <link rel="stylesheet" href="./static/css/layer.css">
+    <!--<script src="./static/js/vconsole.min.js"></script>-->
+
+    <script>
+        // var vConsole = new VConsole();
+    </script>
+    <script type="text/javascript">
+        var baseNetworkUrl = 'https://pdrvip.com';
+        // var baseNetworkUrl = 'http://pdr.fonhua.com';
+        // var baseNetworkUrl = 'http://pdr.cn';
+
+        //rem换算
+        (function (doc, win) {
+            var htmlFont = function () {
+                var docEl = doc.documentElement, l = docEl.clientWidth, f;
+                f = l / 18.75;
+                l > 750 ? docEl.style.fontSize = 40 + "px" : docEl.style.fontSize = f + "px";
+            };
+            htmlFont();
+            win.addEventListener("resize", htmlFont, false);
+        })(document, window);
+    </script>
+
+</head>
+<body>
+<script src="cordova.js"></script>
+<div id="app"></div>
+</body>
+</html>
+
